@@ -30,7 +30,7 @@ module Fluent
       desc "Emit mode. If `batch`, the plugin will emit events per labels matched."
       config_param :emit_mode, :enum, list: [:record, :batch], default: :batch
       desc "Sticky tags will match only one record from an event stream. The same tag will be treated the same way"
-      config_param :sticky_tags, :bool, default: true
+      config_param :sticky_tags, :bool, default: false
       desc "Default label to drain unmatched patterns"
       config_param :default_route, :string, :default => ""
       desc "Metrics labels for the default_route"
